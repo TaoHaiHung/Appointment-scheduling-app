@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/custom_dialog_bottom"
+    android:orientation="vertical"
+    android:padding="10dp">
+    <TextView
+        android:textSize="16dp"
+        android:textColor="@color/black"
+        android:gravity="center_horizontal"
+        android:text="Lọc theo nơi khám"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.github.ihermandev.advancedradiogroup.AdvancedRadioGroup
+            android:id="@+id/radGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/background_textview_find"
+                android:gravity="center"
+                android:padding="10dp"
+                android:weightSum="4">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="4"
+                    android:text="Bác sĩ"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/radBacSi"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/background_textview_find"
+                android:gravity="center"
+                android:padding="10dp"
+                android:weightSum="4">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="4"
+                    android:text="Bệnh viện"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/radBenhVien"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/background_textview_find"
+                android:gravity="center"
+                android:padding="10dp"
+                android:weightSum="4">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="4"
+                    android:text="Phòng khám"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/radPhongKham"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/background_textview_find"
+                android:gravity="center"
+                android:padding="10dp"
+                android:weightSum="4">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="4"
+                    android:text="Tất cả"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/radTatCa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+        </com.github.ihermandev.advancedradiogroup.AdvancedRadioGroup>
+    </LinearLayout>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnApply"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:text="Áp dụng"
+        android:background="@drawable/color_bt"
+        android:layout_height="50dp"/>
+
+</LinearLayout>

@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorBackground"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:padding="5dp">
+
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:src="@drawable/icon_back"
+                tools:ignore="MissingConstraints" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:orientation="vertical"
+                app:layout_constraintStart_toEndOf="@id/ivBack"
+                tools:ignore="MissingConstraints">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Th.BS"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/tvHeader"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Đào Bùi Quý Nguyên"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nestedScroll"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/llSupport"
+            app:layout_constraintTop_toBottomOf="@id/constraintHeader">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingBottom="16dp">
+                <LinearLayout
+                    android:id="@+id/llTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/ivImage"
+                        android:layout_width="96dp"
+                        android:layout_height="96dp"
+                        android:layout_margin="10dp"
+                        android:src="@drawable/img_doctor_one" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="TS.BS"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/tvName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Đào Bùi Quý Nguyên"
+                            android:textColor="@color/black"
+                            android:textSize="18dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvExp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="20 năm kinh nghiệm"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/tvDep"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Nội thận"
+                            android:textColor="@color/black" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Địa chỉ"
+                        android:textColor="@color/black"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="242 Nguyễn Chí Thanh, Phường 2, Quận 10, Hồ Chí Minh" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Nơi công tác"
+                        android:textColor="@color/black"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvHospital"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Bệnh viện Chợ Rãy" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Giới thiệu"
+                        android:textColor="@color/black"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvGioiThieu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Bác sĩ Đào Bùi Quý Nguyên đã hoàn thành khóa học y khoa tại trường đại học danh tiếng, sau đó tiếp tục nghiên cứu và chuyên sâu trong các lĩnh vực như nội tiết, chăm sóc sức khỏe cộng đồng và phòng ngừa bệnh tật. Với kiến thức chuyên sâu và khả năng giải quyết vấn đề tốt, ông đã đóng góp quan trọng trong việc tìm ra các giải pháp y tế hiệu quả và thúc đẩy sự phát triển trong lĩnh vực y học." />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Bác sĩ Đào Bùi Quý Nguyên đã hoàn thành khóa học y khoa tại trường đại học danh tiếng, sau đó tiếp tục nghiên cứu và chuyên sâu trong các lĩnh vực như nội tiết, chăm sóc sức khỏe cộng đồng và phòng ngừa bệnh tật. Với kiến thức chuyên sâu và khả năng giải quyết vấn đề tốt, ông đã đóng góp quan trọng trong việc tìm ra các giải pháp y tế hiệu quả và thúc đẩy sự phát triển trong lĩnh vực y học." />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Bác sĩ Đào Bùi Quý Nguyên đã hoàn thành khóa học y khoa tại trường đại học danh tiếng, sau đó tiếp tục nghiên cứu và chuyên sâu trong các lĩnh vực như nội tiết, chăm sóc sức khỏe cộng đồng và phòng ngừa bệnh tật. Với kiến thức chuyên sâu và khả năng giải quyết vấn đề tốt, ông đã đóng góp quan trọng trong việc tìm ra các giải pháp y tế hiệu quả và thúc đẩy sự phát triển trong lĩnh vực y học." />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Bác sĩ Đào Bùi Quý Nguyên đã hoàn thành khóa học y khoa tại trường đại học danh tiếng, sau đó tiếp tục nghiên cứu và chuyên sâu trong các lĩnh vực như nội tiết, chăm sóc sức khỏe cộng đồng và phòng ngừa bệnh tật. Với kiến thức chuyên sâu và khả năng giải quyết vấn đề tốt, ông đã đóng góp quan trọng trong việc tìm ra các giải pháp y tế hiệu quả và thúc đẩy sự phát triển trong lĩnh vực y học." />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </androidx.core.widget.NestedScrollView>
+
+        <LinearLayout
+            android:weightSum="2"
+            android:id="@+id/llSupport"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="20dp"
+                android:src="@drawable/icon_phone" />
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hỗ trợ đặt khám"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1900-2805"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_weight="1"
+                android:id="@+id/btnBooking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/color_bt"
+                android:padding="10dp"
+                android:text="Đặt khám ngay"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:layout_marginEnd="20dp"/>
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

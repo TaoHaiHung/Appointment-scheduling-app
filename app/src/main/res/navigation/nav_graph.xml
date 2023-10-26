@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.example.appdoctor.splashscreen.SplashFragment"
+        android:label="SplashFragment"
+        tools:layout="@layout/fragment_splash">
+        <action
+            android:id="@+id/action_splashFragment_to_onboardingFragment"
+            app:destination="@+id/onboardingFragment"/>
+
+    </fragment>
+    <fragment
+        android:id="@+id/onboardingFragment"
+        android:name="com.example.appdoctor.splashscreen.OnboardingFragment"
+        android:label="OnboardingFragment"
+        tools:layout="@layout/fragment_onboarding">
+        <action
+            android:id="@+id/action_onboardingFragment_to_loginFragment"
+            app:destination="@+id/loginFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait_anim"
+            app:popEnterAnim="@anim/wait_anim"
+            app:popExitAnim="@anim/slide_right"/>
+        <action
+            android:id="@+id/action_onboardingFragment_to_homeFragment"
+            app:destination="@+id/homeFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait_anim"
+            app:popEnterAnim="@anim/wait_anim"
+            app:popExitAnim="@anim/slide_right"/>
+
+
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.appdoctor.login.LoginFragment"
+        android:label="LoginFragment"
+        tools:layout="@layout/fragment_login">
+
+        <action
+            android:id="@+id/action_loginFragment_to_singUpFragment"
+            app:destination="@+id/singUpFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait_anim"
+            app:popEnterAnim="@anim/wait_anim"
+            app:popExitAnim="@anim/slide_right"/>
+        <action
+            android:id="@+id/action_loginFragment_to_homeFragment"
+            app:destination="@+id/homeFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait_anim"
+            app:popEnterAnim="@anim/wait_anim"
+            app:popExitAnim="@anim/slide_right"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/singUpFragment"
+        android:name="com.example.appdoctor.login.SignUpFragment"
+        android:label="SignUpFragment"
+        tools:layout="@layout/fragment_sign_up">
+        <action
+            android:id="@+id/action_singUpFragment_to_loginFragment"
+            app:destination="@+id/loginFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait_anim"
+            app:popEnterAnim="@anim/wait_anim"
+            app:popExitAnim="@anim/slide_right"/>
+
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.appdoctor.view.homescreen.HomeFragment"
+        android:label="HomeFragment"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_loginFragment"
+            app:destination="@+id/loginFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait_anim"
+            app:popEnterAnim="@anim/wait_anim"
+            app:popExitAnim="@anim/slide_right"/>
+        <action
+            android:id="@+id/action_homeFragment_to_findFragment"
+            app:destination="@+id/findFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait_anim"
+            app:popEnterAnim="@anim/wait_anim"
+            app:popExitAnim="@anim/slide_right"/>
+        <action
+            android:id="@+id/action_homeFragment_to_detailDotorFragment"
+            app:destination="@+id/detailDotorFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait_anim"
+            app:popEnterAnim="@anim/wait_anim"
+            app:popExitAnim="@anim/slide_right"/>
+        <action
+            android:id="@+id/action_homeFragment_to_detailClinicFragment"
+            app:destination="@+id/detailClinicFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait_anim"
+            app:popEnterAnim="@anim/wait_anim"
+            app:popExitAnim="@anim/slide_right"/>
+    </fragment>
+
+<!--    DetailClinicFragment-->
+    <fragment
+        android:id="@+id/detailClinicFragment"
+        android:name="com.example.appdoctor.view.detailscreen.DetailClinicFragment"
+        android:label="DetailClinicFragment"
+        tools:layout="@layout/fragment_detail_clinic">
+        <action
+            android:id="@+id/action_detailClinicFragment_to_bookingClinicFragment"
+            app:destination="@+id/bookingClinicFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait_anim"
+            app:popEnterAnim="@anim/wait_anim"
+            app:popExitAnim="@anim/slide_right"/>
+
+    </fragment>
+    <!--    BookingClinicFragment-->
+    <fragment
+        android:id="@+id/bookingClinicFragment"
+        android:name="com.example.appdoctor.view.bookingClinic.BookingClinicFragment"
+        android:label="BookingClinicFragment"
+        tools:layout="@layout/fragment_booking_clinic">
+        <action
+            android:id="@+id/action_bookingClinicFragment_to_addressClinicFragment"
+            app:destination="@+id/addressClinicFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait_anim"
+            app:popEnterAnim="@anim/wait_anim"
+            app:popExitAnim="@anim/slide_right"/>
+        <action
+            android:id="@+id/action_bookingClinicFragment_to_calendarFragment"
+            app:destination="@+id/calendarFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait_anim"
+            app:popEnterAnim="@anim/wait_anim"
+            app:popExitAnim="@anim/slide_right"/>
+        <action
+            android:id="@+id/action_bookingClinicFragment_to_bookingFileFragment"
+            app:destination="@+id/bookingFileFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait_anim"
+            app:popEnterAnim="@anim/wait_anim"
+            app:popExitAnim="@anim/slide_right"/>
+        <action
+            android:id="@+id/action_bookingClinicFragment_to_scheduleFragment"
+            app:destination="@+id/scheduleFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait_anim"
+            app:popEnterAnim="@anim/wait_anim"
+            app:popExitAnim="@anim/slide_right"/>
+        <action
+            android:id="@+id/action_bookingClinicFragment_to_detailBookingFragment"
+            app:destination="@+id/detailBookingFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait_anim"
+            app:popEnterAnim="@anim/wait_anim"
+            app:popExitAnim="@anim/slide_right">
+        </action>
+
+    </fragment>
+
+    <!--    AddressClinicFragment-->
+    <fragment
+        android:id="@+id/addressClinicFragment"
+        android:name="com.example.appdoctor.view.bookingClinic.AddressClinicFragment"
+        android:label="AddressClinicFragment"
+        tools:layout="@layout/fragment_address_clinic">
+    </fragment>
+
+<!--    findFragment-->
+    <fragment
+        android:id="@+id/findFragment"
+        android:name="com.example.appdoctor.view.findscreen.FindFragment"
+        android:label="FindFragment"
+        tools:layout="@layout/fragment_find_doctor">
+        <action
+            android:id="@+id/action_findFragment_to_bookingFragment"
+            app:destination="@+id/bookingFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait_anim"
+            app:popEnterAnim="@anim/wait_anim"
+            app:popExitAnim="@anim/slide_right"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/detailDotorFragment"
+        android:name="com.example.appdoctor.view.detailscreen.DetailDotorFragment"
+        android:label="DetailDotorFragment"
+        tools:layout="@layout/fragment_detail_doctor">
+        <action
+            android:id="@+id/action_detailDotorFragment_to_bookingFragment"
+            app:destination="@+id/bookingFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait_anim"
+            app:popEnterAnim="@anim/wait_anim"
+            app:popExitAnim="@anim/slide_right"/>
+
+    </fragment>
+<!--    FragmentBooking-->
+    <fragment
+        android:id="@+id/bookingFragment"
+        android:name="com.example.appdoctor.view.booking.BkFragment"
+        android:label="bookingFragment"
+        tools:layout="@layout/fragment_booking">
+
+        <action
+            android:id="@+id/action_bookingFragment_to_calendarFragment"
+            app:destination="@+id/calendarFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait_anim"
+            app:popEnterAnim="@anim/wait_anim"
+            app:popExitAnim="@anim/slide_right"/>
+        <action
+            android:id="@+id/action_bookingFragment_to_bookingFileFragment"
+            app:destination="@+id/bookingFileFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait_anim"
+            app:popEnterAnim="@anim/wait_anim"
+            app:popExitAnim="@anim/slide_right"/>
+        <action
+            android:id="@+id/action_bookingFragment_to_detailBookingFragment"
+            app:destination="@+id/detailBookingFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait_anim"
+            app:popEnterAnim="@anim/wait_anim"
+            app:popExitAnim="@anim/slide_right">
+        </action>
+        <action
+            android:id="@+id/action_bookingFragment_to_scheduleFragment"
+            app:destination="@+id/scheduleFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait_anim"
+            app:popEnterAnim="@anim/wait_anim"
+            app:popExitAnim="@anim/slide_right">
+
+        </action>
+
+    </fragment>
+    <!--    DetailBookingFragment-->
+    <fragment
+        android:id="@+id/detailBookingFragment"
+        android:name="com.example.appdoctor.view.booking.DetailBookingFragment"
+        android:label="DetailBookingFragment"
+        tools:layout="@layout/fragment_detail_booking">
+        <action
+            android:id="@+id/action_detailBookingFragment_to_successDetailFragment"
+            app:destination="@+id/successDetailFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait_anim"
+            app:popEnterAnim="@anim/wait_anim"
+            app:popExitAnim="@anim/slide_right">
+
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/successDetailFragment"
+        android:name="com.example.appdoctor.view.booking.SuccessDetailFragment"
+        android:label="SuccessDetailFragment"
+        tools:layout="@layout/fragment_success_detail">
+
+
+    </fragment>
+    <!--    FragmentCalendar-->
+    <fragment
+        android:id="@+id/calendarFragment"
+        android:name="com.example.appdoctor.view.booking.CalendarFragment"
+        android:label="CalendarFragment"
+        tools:layout="@layout/fragment_calendar">
+        <action
+            android:id="@+id/action_calendarFragment_to_bookingFragment"
+            app:destination="@+id/bookingFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait_anim"
+            app:popEnterAnim="@anim/wait_anim"
+            app:popExitAnim="@anim/slide_right">
+
+        </action>
+
+    </fragment>
+    <!--    ScheduleFragment-->
+    <fragment
+        android:id="@+id/scheduleFragment"
+        android:name="com.example.appdoctor.view.booking.ScheduleFragment"
+        android:label="ScheduleFragment"
+        tools:layout="@layout/fragment_schedule">
+
+
+    </fragment>
+
+    <!--    BookingFileFragment-->
+    <fragment
+        android:id="@+id/bookingFileFragment"
+        android:name="com.example.appdoctor.view.booking.BookingFileFragment"
+        android:label="CalendarFragment"
+        tools:layout="@layout/fragment_booking_file">
+        <action
+            android:id="@+id/action_bookingFileFragment_to_bookingFragment"
+            app:destination="@+id/bookingFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait_anim"
+            app:popEnterAnim="@anim/wait_anim"
+            app:popExitAnim="@anim/slide_right"/>
+        <action
+            android:id="@+id/action_bookingFileFragment_to_newFileFragment"
+            app:destination="@+id/newFileFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait_anim"
+            app:popEnterAnim="@anim/wait_anim"
+            app:popExitAnim="@anim/slide_right"/>
+
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/appointmentFragment"
+        android:name="com.example.appdoctor.view.appointment.AppointmentFragment"
+        android:label="AppointmentFragment"
+        tools:layout="@layout/fragment_appointment">
+        <action
+            android:id="@+id/action_appointmentFragment_to_detailAppointmentFragment"
+            app:destination="@+id/detailAppointmentFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait_anim"
+            app:popEnterAnim="@anim/wait_anim"
+            app:popExitAnim="@anim/slide_right"/>
+    </fragment>
+<!--    detailAppointmentFragment-->
+    <fragment
+        android:id="@+id/detailAppointmentFragment"
+        android:name="com.example.appdoctor.view.appointment.DetailAppointmentFragment"
+        android:label="DetailAppointmentFragment"
+        tools:layout="@layout/fragment_detail_appointment">
+        <action
+            android:id="@+id/action_detailAppointmentFragment_to_detailDotorFragment"
+            app:destination="@+id/detailDotorFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait_anim"
+            app:popEnterAnim="@anim/wait_anim"
+            app:popExitAnim="@anim/slide_right"/>
+        <action
+            android:id="@+id/action_detailAppointmentFragment_to_detailClinicFragment"
+            app:destination="@+id/detailClinicFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait_anim"
+            app:popEnterAnim="@anim/wait_anim"
+            app:popExitAnim="@anim/slide_right"/>
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/fileFragment"
+        android:name="com.example.appdoctor.view.file.FileFragment"
+        android:label="FileFragment"
+        tools:layout="@layout/fragment_file">
+        <action
+            android:id="@+id/action_fileFragment_to_newFileFragment"
+            app:destination="@+id/newFileFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait_anim"
+            app:popEnterAnim="@anim/wait_anim"
+            app:popExitAnim="@anim/slide_right"/>
+        <action
+            android:id="@+id/action_fileFragment_to_detailFileFragment"
+            app:destination="@+id/detailFileFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait_anim"
+            app:popEnterAnim="@anim/wait_anim"
+            app:popExitAnim="@anim/slide_right"/>
+
+    </fragment>
+    <fragment
+        android:id="@+id/detailFileFragment"
+        android:name="com.example.appdoctor.view.file.DetailFileFragment"
+        android:label="DetailFileFragment"
+        tools:layout="@layout/fragment_detial_file">
+        <action
+            android:id="@+id/action_detailFileFragment_to_newFileFragment"
+            app:destination="@+id/newFileFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait_anim"
+            app:popEnterAnim="@anim/wait_anim"
+            app:popExitAnim="@anim/slide_right"/>
+
+    </fragment>
+<!--    FragmentNewFile-->
+    <fragment
+        android:id="@+id/newFileFragment"
+        android:name="com.example.appdoctor.view.file.NewFileFragment"
+        android:label="NewFileFragment"
+        tools:layout="@layout/fragment_new_file">
+    </fragment>
+    <fragment
+        android:id="@+id/userFragment"
+        android:name="com.example.appdoctor.view.userscreen.UserFragment"
+        android:label="UserFragment"
+        tools:layout="@layout/fragment_user">
+        <action
+            android:id="@+id/action_userFragment_to_loginFragment"
+            app:destination="@+id/loginFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait_anim"
+            app:popEnterAnim="@anim/wait_anim"
+            app:popExitAnim="@anim/slide_right"/>
+    </fragment>
+
+
+
+
+</navigation>

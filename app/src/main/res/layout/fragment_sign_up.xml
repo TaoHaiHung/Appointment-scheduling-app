@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.example.appdoctor.login.SignUpViewModel" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/img_background">
+        <TextView
+            android:layout_marginTop="100dp"
+            android:id="@+id/tvHeader"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:text="Join us to start searching"/>
+        <TextView
+            android:id="@+id/tvTitle"
+            app:layout_constraintTop_toBottomOf="@id/tvHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            android:gravity="center"
+            android:text="You can search c ourse,apply course and find scholarship for abroad studies"/>
+
+
+
+        <LinearLayout
+            android:id="@+id/llLogin"
+            android:layout_margin="40dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvTitle"
+            android:layout_width="335dp"
+            android:layout_height="54dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <!--        Gmail-->
+            <LinearLayout
+                android:id="@+id/llGoogle"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/background_edittext"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="54dp">
+                <ImageView
+                    android:layout_marginStart="20dp"
+                    android:src="@drawable/icon_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"/>
+                <TextView
+                    android:layout_marginStart="20dp"
+                    android:gravity="center"
+                    android:text="Google"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"/>
+            </LinearLayout>
+            <!--        Facebook-->
+
+            <LinearLayout
+                android:id="@+id/llFacebook"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/background_edittext"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="54dp">
+                <ImageView
+                    android:layout_marginStart="20dp"
+                    android:src="@drawable/icon_facebook"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"/>
+                <TextView
+                    android:layout_marginStart="20dp"
+                    android:gravity="center"
+                    android:text="Facebook"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"/>
+            </LinearLayout>
+        </LinearLayout>
+        <!--    edittext Name-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_margin="40dp"
+            android:background="@drawable/background_edittext"
+            android:id="@+id/txtLayout_Name"
+            app:layout_constraintTop_toBottomOf="@id/llLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edtName"
+                android:hint="Name"
+                android:paddingStart="40dp"
+                android:background="@null"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <!--    editText Email-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/background_edittext"
+            android:id="@+id/txtLayout_Email"
+            app:layout_constraintTop_toBottomOf="@id/txtLayout_Name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edtEmail"
+                android:hint="Email"
+                android:paddingStart="40dp"
+                android:background="@null"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <!--    EditText Password-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/background_edittext"
+            android:id="@+id/txtLayout_Pass"
+            app:layout_constraintTop_toBottomOf="@id/txtLayout_Email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:passwordToggleEnabled="true">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edtPass"
+                android:hint="Password"
+                android:paddingStart="40dp"
+                android:background="@null"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <LinearLayout
+            android:id="@+id/llCheckbox"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtLayout_Pass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp">
+            <CheckBox
+                android:layout_width="24dp"
+                android:layout_height="24dp"/>
+            <TextView
+                android:layout_marginStart="10dp"
+                android:text="I agree with the Terms of Service and Privacy Policy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#677294"
+                android:textStyle="bold"/>
+        </LinearLayout>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnRegister"
+            android:textSize="20dp"
+            android:text="Sign up"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:background="@drawable/color_bt"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/llCheckbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/tvLogin"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Have an account? Log in"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:textColor="#0EBE7F"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

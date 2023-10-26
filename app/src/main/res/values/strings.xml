@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Doctor Hunt</string>
+    <string name="skip_intro">SKIP INTRO</string>
+    <string name="next">NEXT</string>
+    <string name="date">Ngày khám</string>
+    <string name="hour">Giờ khám</string>
+    <string name="customes">Bệnh nhân</string>
+    <string name="note">Ghi chú</string>
+    <string name="base">Cơ sở</string>
+    <string name="select_address">Chọn cơ sở</string>
+    <string name="select_date">Chọn ngày khám</string>
+    <string name="select_hour">Chọn giờ khám</string>
+    <string name="select_customers">Chọn hồ sơ bệnh nhân</string>
+    <string name="btn_continue">Tiếp tục</string>
+</resources>

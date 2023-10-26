@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.appdoctor.view.appointment.AppointmentViewModel" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_marginBottom="60dp">
+        <LinearLayout
+            android:id="@+id/llHeader"
+            android:orientation="vertical"
+            android:background="#0EBE7F"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+            <TextView
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                android:id="@+id/tvTitle"
+                android:text="Lịch khám "
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvSearch"
+                android:background="@null"
+                android:layout_margin="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                app:cardCornerRadius="10dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintSearch"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:id="@+id/ivSearch"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/icon_search"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <EditText
+                        android:gravity="center_vertical"
+                        android:background="#ffffff"
+                        android:paddingStart="20dp"
+                        android:id="@+id/edtSearch"
+                        app:layout_constraintStart_toEndOf="@+id/ivSearch"
+                        android:hint="Tìm theo tên bệnh nhân"
+                        android:layout_width="300dp"
+                        android:layout_height="match_parent"
+                        android:maxLines="1"
+                        android:singleLine="true"/>
+                    <ImageView
+
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginTop="10dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/edtSearch"
+                        android:src="@drawable/icon_close"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+        <com.facebook.shimmer.ShimmerFrameLayout
+            app:layout_constraintTop_toBottomOf="@id/llHeader"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:visibility="gone"
+            android:id="@+id/shimmer"
+            android:layout_marginTop="100dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <include layout="@layout/item_shimer_appointment"/>
+                <include layout="@layout/item_shimer_appointment"/>
+                <include layout="@layout/item_shimer_appointment"/>
+                <include layout="@layout/item_shimer_appointment"/>
+                <include layout="@layout/item_shimer_appointment"/>
+                <include layout="@layout/item_shimer_appointment"/>
+                <include layout="@layout/item_shimer_appointment"/>
+                <include layout="@layout/item_shimer_appointment"/>
+
+            </LinearLayout>
+
+        </com.facebook.shimmer.ShimmerFrameLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvPhieuKham"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/llHeader"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            tools:listitem="@layout/item_phieu_kham"
+
+            ></androidx.recyclerview.widget.RecyclerView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

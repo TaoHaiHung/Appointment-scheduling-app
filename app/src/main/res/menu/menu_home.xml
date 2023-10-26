@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/home"
+        android:title="Trang chủ"
+        android:icon="@drawable/icon_home"
+        app:showAsAction="ifRoom"
+        />
+
+    <item android:id="@+id/Calendar"
+        android:title="Lịch khám"
+        android:icon="@drawable/icon_love"
+        app:showAsAction="ifRoom"
+        />
+
+    <item android:id="@+id/File"
+        android:title="Hồ sơ"
+        android:icon="@drawable/icon_file"
+        app:showAsAction="ifRoom"
+        />
+    <item android:id="@+id/User"
+        android:title="Tài Khoản"
+        android:icon="@drawable/ic_person"
+        app:showAsAction="ifRoom"
+        />
+
+
+</menu>
